@@ -74,23 +74,29 @@ public class FriendListFragment extends ListFragment implements LoaderCallbacks<
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		Intent intent = null;
-		switch (item.getItemId()) {
-			case R.id.menu_add_friend:
-				intent = new Intent(getActivity(), AddFriendActivity.class);
-				startActivityForResult(intent, REQUEST_CODE_ADD_FRIEND);
-				return true;
-			case R.id.menu_reload:
-				this.getLoaderManager().restartLoader(0, null, this);
-				return true;
-			case R.id.menu_signout:
-				PreferencesManager.setStoredAccessToken("");
-				KiiUser.logOut();
-				intent = new Intent(getActivity(), MainActivity.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
+		/**
+		 * M. Alfiyan Syamsuddin
+		 * before : use switch-case
+		 * edit -> http://tools.android.com/tips/non-constant-fields
+		 * Problem : Migrate Android Code, As of ADT 14, resource fields cannot be used as switch cases. 
+		 */
+		int id = item.getItemId();
+		if(id == R.id.menu_add_friend){
+			intent = new Intent(getActivity(), AddFriendActivity.class);
+			startActivityForResult(intent, REQUEST_CODE_ADD_FRIEND);
+			return true;
+		}else if(id == R.id.menu_reload){
+			this.getLoaderManager().restartLoader(0, null, this);
+			return true;
+		}else if(id == R.id.menu_signout){
+			PreferencesManager.setStoredAccessToken("");
+			KiiUser.logOut();
+			intent = new Intent(getActivity(), MainActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			return true;
+		}else{
+			return super.onOptionsItemSelected(item);
 		}
 	}
 	@Override
