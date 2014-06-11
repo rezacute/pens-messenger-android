@@ -22,7 +22,7 @@ public class PreferencesManager {
 		return getSharedPreferences().getString(Key.ACCESS_TOKEN, null);
 	}
 	private static SharedPreferences getSharedPreferences() {
-		return PreferenceManager.getDefaultSharedPreferences(PensMessenggerApplication.getContext());
+		return PreferenceManager.getDefaultSharedPreferences(PMApplication.getContext());
 	}
 	private static void setString(String key, String value) {
 		Editor editor = getSharedPreferences().edit();

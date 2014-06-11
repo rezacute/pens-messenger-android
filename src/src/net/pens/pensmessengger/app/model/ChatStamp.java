@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.pens.pensmessengger.app.ApplicationConst;
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 import net.pens.pensmessengger.app.util.Logger;
 import net.pens.pensmessengger.app.util.StampCacheUtils;
 
@@ -203,7 +203,7 @@ public class ChatStamp extends KiiObjectWrapper {
 		this.kiiObject.save();
 		if (this.imageFile != null) {
 			this.uri = this.kiiObject.toUri().toString();
-			KiiUploader uploader = this.kiiObject.uploader(PensMessenggerApplication.getContext(), this.imageFile);
+			KiiUploader uploader = this.kiiObject.uploader(PMApplication.getContext(), this.imageFile);
 			uploader.transfer(null);
 			// Renames uploaded image in order to cache the image.
 			File cacheFile = StampCacheUtils.getCacheFile(this.kiiObject.toUri().toString());
@@ -237,7 +237,7 @@ public class ChatStamp extends KiiObjectWrapper {
 				} else {
 					// Downloads a image from KiiCloud.
 					Logger.i("downloads stamp image from KiiCloud");
-					KiiDownloader downloader = this.kiiObject.downloader(PensMessenggerApplication.getContext(), cacheFile);
+					KiiDownloader downloader = this.kiiObject.downloader(PMApplication.getContext(), cacheFile);
 					downloader.transfer(null);
 					image = readImageFromLocal(cacheFile);
 				}

@@ -3,7 +3,7 @@ package net.pens.pensmessengger.app.util;
 import java.io.IOException;
 
 import net.pens.pensmessengger.app.ApplicationConst;
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
@@ -20,7 +20,7 @@ public class GCMUtils {
 		int retry = 0;
 		while (retry < 3) {
 			try {
-				GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(PensMessenggerApplication.getContext());
+				GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(PMApplication.getContext());
 				registrationId = gcm.register(ApplicationConst.SENDER_ID);
 				break;
 			} catch (IOException ignore) {

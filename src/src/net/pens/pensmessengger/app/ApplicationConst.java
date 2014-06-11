@@ -11,9 +11,9 @@ public final class ApplicationConst {
 	public static final String APP_ID = "76d23455";
 	public static final String APP_KEY = "cf658ffa668066334892a29befd48e69";
 	// TODO:Needs to overwrite SENDER_ID. Refer to http://developer.android.com/google/gcm/gcm.html#senderid
-	public static final String SENDER_ID = "1012419078893";
+	public static final String SENDER_ID = "989311911094";
 	// TODO:Needs to overwrite FACEBOOK_APP_ID. Refer to http://documentation.kii.com/en/guides/android/managing-users/social-network-integration/facebook-integration/
-	public static final String FACEBOOK_APP_ID = "699038683441923";
+	public static final String FACEBOOK_APP_ID = "669299033138375";
 	// TODO:Needs to overwrite AGGREGATION_RULE_ID. Refer to http://documentation.kii.com/en/guides/android/managing-analytics/flex-analytics/analyze-event-data/
 	public static final String AGGREGATION_RULE_ID = "87";
 	

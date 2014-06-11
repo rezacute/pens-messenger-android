@@ -1,6 +1,6 @@
 package net.pens.pensmessengger.app.ui.util;
 
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 import android.content.Context;
 import android.widget.Toast;
 
@@ -26,7 +26,7 @@ public class ToastUtils {
 		show(context, msgId, Toast.LENGTH_LONG);
 	}
 	public static final void show(Context context, int msgId, int duration) {
-		String msg = PensMessenggerApplication.getMessage(msgId);
+		String msg = PMApplication.getMessage(msgId);
 		show(context, msg, duration);
 	}
 }

@@ -1,6 +1,6 @@
 package net.pens.pensmessengger.app.ui.util;
 
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -57,7 +57,7 @@ public class SimpleProgressDialogFragment extends DialogFragment {
 		if (id == BLANK) {
 			return "";
 		}
-		return PensMessenggerApplication.getMessage(id);
+		return PMApplication.getMessage(id);
 	}
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {

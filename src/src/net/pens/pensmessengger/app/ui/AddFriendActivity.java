@@ -2,7 +2,7 @@ package net.pens.pensmessengger.app.ui;
 
 import java.util.List;
 
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 import net.pens.pensmessengger.app.R;
 import net.pens.pensmessengger.app.model.ChatFriend;
 import net.pens.pensmessengger.app.model.ChatUser;
@@ -60,7 +60,7 @@ public class AddFriendActivity extends ActionBarActivity implements LoaderCallba
 		inflater.inflate(R.menu.add_friend_menu, menu);
 		MenuItem searchItem = menu.findItem(R.id.menu_search_user);
 		SearchView searchView = (SearchView)MenuItemCompat.getActionView(searchItem);
-		searchView.setQueryHint(PensMessenggerApplication.getMessage(R.string.hint_search_user));
+		searchView.setQueryHint(PMApplication.getMessage(R.string.hint_search_user));
 		searchView.setOnQueryTextListener(new OnQueryTextListener() {
 			@Override
 			public boolean onQueryTextSubmit(String query) {

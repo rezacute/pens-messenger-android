@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import net.pens.pensmessengger.app.PensMessenggerApplication;
+import net.pens.pensmessengger.app.PMApplication;
 import net.pens.pensmessengger.app.model.ChatStamp;
 
 import org.apache.commons.io.IOUtils;
@@ -33,7 +33,7 @@ public class StampCacheUtils {
 	 * @return
 	 */
 	public static File copyToCache(Uri source, int maxSize) throws IOException {
-		InputStream is = PensMessenggerApplication.getContext().getContentResolver().openInputStream(source);
+		InputStream is = PMApplication.getContext().getContentResolver().openInputStream(source);
 		FileOutputStream os = null;
 		try {
 			BitmapFactory.Options imageOptions = new BitmapFactory.Options();
@@ -43,7 +43,7 @@ public class StampCacheUtils {
 			
 			float imageScaleWidth = (float)imageOptions.outWidth / maxSize;
 			float imageScaleHeight = (float)imageOptions.outHeight / maxSize;
-			is = PensMessenggerApplication.getContext().getContentResolver().openInputStream(source);
+			is = PMApplication.getContext().getContentResolver().openInputStream(source);
 			
 			Bitmap bitmap = null;
 			if (imageScaleWidth > 2 && imageScaleHeight > 2) {
@@ -74,7 +74,7 @@ public class StampCacheUtils {
 	 */
 	public static File getCacheFile(String uri) {
 		final File cacheDir = new File(Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED || !isExternalStorageRemovable() ?
-				getExternalCacheDir(PensMessenggerApplication.getContext()).getPath() : PensMessenggerApplication.getContext().getCacheDir().getPath());
+				getExternalCacheDir(PMApplication.getContext()).getPath() : PMApplication.getContext().getCacheDir().getPath());
 		if (cacheDir.exists()) {
 			cacheDir.mkdirs();
 		}
