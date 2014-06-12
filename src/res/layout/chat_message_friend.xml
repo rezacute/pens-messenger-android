@@ -17,5 +17,6 @@
 		android:paddingBottom="5dip"
 		android:background="@drawable/chat_bubble_friend"
 		android:layout_alignParentLeft="true"
-		android:singleLine="false"/>
+		android:singleLine="false"
+		android:textSize="15sp"/>
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Pens Messengger</string>
+	<string name="app_name">Pens Messenger</string>
 	<string name="image_blank"></string>
 	<string name="empty_result">Result is Empty</string>
 	<string name="action_settings">Settings</string>
@@ -31,4 +31,5 @@
 	<string name="menu_reload">Reload</string>
 	<string name="popup_menu_sort_by_newly">Sort by Newly</string>
 	<string name="popup_menu_sort_by_popularity">Sort by Popularity</string>
+	<string name="button_twitter">Sign In with Twitter</string>
 </resources>

@@ -29,6 +29,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -54,8 +55,8 @@ public class SelectStampDialogFragment extends DialogFragment implements LoaderC
 	private WeakReference<OnSelectStampListener> onSelectStampListener;
 	private TextView textEmpty;
 	private GridView gridView;
-	private ImageButton btnAddStamp;
-	private ImageButton btnSortStamp;
+	private Button btnAddStamp;
+	private Button btnSortStamp;
 	private ChatStampListAdpter adapter;
 	private ChatStampImageFetcher imageFetcher;
 	private int selectedPopupMenuItem = R.id.menu_sort_by_newly;
@@ -95,7 +96,7 @@ public class SelectStampDialogFragment extends DialogFragment implements LoaderC
 			public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 			}
 		});
-		this.btnAddStamp = (ImageButton)view.findViewById(R.id.button_add_stamp);
+		this.btnAddStamp = (Button)view.findViewById(R.id.button_add_stamp);
 		this.btnAddStamp.setOnClickListener(new android.view.View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -106,7 +107,7 @@ public class SelectStampDialogFragment extends DialogFragment implements LoaderC
 				dismiss();
 			}
 		});
-		this.btnSortStamp = (ImageButton)view.findViewById(R.id.button_sort_stamp);
+		this.btnSortStamp = (Button)view.findViewById(R.id.button_sort_stamp);
 		this.btnSortStamp.setOnClickListener(new android.view.View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

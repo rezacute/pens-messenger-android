@@ -17,6 +17,9 @@ public final class ApplicationConst {
 	// TODO:Needs to overwrite AGGREGATION_RULE_ID. Refer to http://documentation.kii.com/en/guides/android/managing-analytics/flex-analytics/analyze-event-data/
 	public static final String AGGREGATION_RULE_ID = "87";
 	
+	public static final String TWITTER_CONSUMER_KEY = "YTTaywAlREW1Q5cd7klfo3NX0";
+	public static final String TWITTER_CONSUMER_SECRET = "YC6U7k40C8qY9dbIEveLmLObTeiYnbKgopQxJWiBn8krTy1tTZ";
+	
 	public static final String TOPIC_INVITE_NOTIFICATION = "invite_notify";
 	/**
 	 * 

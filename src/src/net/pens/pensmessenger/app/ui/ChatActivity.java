@@ -31,8 +31,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -54,8 +54,8 @@ public class ChatActivity extends FragmentActivity implements OnSelectStampListe
 	private MessageListAdapter adapter;
 	private ChatStampImageFetcher imageFetcher;
 	private EditText editMessage;
-	private ImageButton btnSelectEmoticon;
-	private ImageButton btnSend;
+	private Button btnSelectEmoticon;
+	private Button btnSend;
 	private KiiGroup kiiGroup;
 	private Long lastGotTime;
 	
@@ -94,7 +94,7 @@ public class ChatActivity extends FragmentActivity implements OnSelectStampListe
 				}
 			}
 		});
-		this.btnSelectEmoticon = (ImageButton)findViewById(R.id.button_select_stamp);
+		this.btnSelectEmoticon = (Button)findViewById(R.id.button_select_stamp);
 		this.btnSelectEmoticon.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -103,7 +103,7 @@ public class ChatActivity extends FragmentActivity implements OnSelectStampListe
 			}
 		});
 		
-		this.btnSend = (ImageButton)findViewById(R.id.button_send);
+		this.btnSend = (Button)findViewById(R.id.button_send);
 		this.btnSend.setEnabled(false);
 		this.btnSend.setOnClickListener(new OnClickListener() {
 			@Override
@@ -172,6 +172,7 @@ public class ChatActivity extends FragmentActivity implements OnSelectStampListe
 		TextView message;
 		ImageView stamp;
 	}
+	
 	/**
 	 * A adapter class to show the {@link ChatMessage}.
 	 */

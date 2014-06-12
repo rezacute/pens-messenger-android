@@ -10,12 +10,12 @@
 		android:orientation="horizontal"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content">
-		<ImageButton
+		<Button
 			android:id="@+id/button_add_stamp"
-			android:src="@drawable/add_stamp"
+			android:background="@drawable/ic_action_new_picture"
 			android:contentDescription="@string/image_blank"
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
 			android:layout_marginTop="6dip"
 			android:layout_marginLeft="6dip"
 			android:gravity="left|center"/>
@@ -29,12 +29,12 @@
 			android:layout_gravity="center_vertical"
 			android:layout_weight="1"
 			android:textSize="20sp"/>
-		<ImageButton
+		<Button
 			android:id="@+id/button_sort_stamp"
-			android:src="@drawable/sort_stamp"
+			android:background="@drawable/ic_action_sort_by_size"
 			android:contentDescription="@string/image_blank"
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
 			android:layout_marginTop="6dip"
 			android:layout_marginRight="6dip"
 			android:gravity="right|center"/>
