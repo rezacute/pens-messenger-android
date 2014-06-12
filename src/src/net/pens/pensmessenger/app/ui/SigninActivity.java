@@ -9,7 +9,6 @@ import net.pens.pensmessenger.app.ui.loader.task.ChatUserInitializeTask.OnInitia
 import net.pens.pensmessenger.app.ui.util.SimpleProgressDialogFragment;
 import net.pens.pensmessenger.app.ui.util.ToastUtils;
 import net.pens.pensmessenger.app.util.Logger;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
