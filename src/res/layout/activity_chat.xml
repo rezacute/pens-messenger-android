@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:addStatesFromChildren="true"
+        android:baselineAligned="false"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="horizontal"
+        android:background="#fffff8" >
+
+        <Button
+            android:id="@+id/button_select_stamp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_action_new_picture"
+            android:contentDescription="@string/image_blank"
+            android:gravity="bottom" />
+
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:freezesText="true"
+            android:inputType="textMultiLine"
+            android:paddingRight="5dp" />
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_action_send_now"
+            android:contentDescription="@string/image_blank"
+            android:gravity="bottom"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="5dp"
+        android:divider="@null"
+        android:layout_above="@id/footer" />
+
+</RelativeLayout>
