@@ -1,7 +1,11 @@
 pens-messenger-android
 ======================
+[English]
+======================
+Implementation of KiiChat (https://github.com/KiiPlatform/KiiChat) from Students, Lecturers and Alumni of EEPIS (http://www.eepis-its.edu/), Surabaya Indonesia.
 
 [Indonesian]
+======================
 Ini adalah proyek opensource untuk applikasi android yang dikembangkan opeh Mahasiswa, Dosen dan Alumni Politeknik Elektronika Negeri Surabaya, Indonesia.
 Source code dari applikasi ini bersumber dari https://github.com/KiiPlatform/KiiChat .
 Untuk pengembangan lebih lanjut, selain collabolators (yang telah diincludekan dlm repositori ini) diharap forking repository ini untuk selanjutnya mengikuti panduan kolaborasi.
